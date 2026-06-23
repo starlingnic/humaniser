@@ -4,11 +4,21 @@
 
 ## Установка
 
-Нужен установленный [Claude Code](https://docs.claude.com/claude-code). Затем:
+Нужен установленный [Claude Code](https://docs.claude.com/claude-code) и `git`. Выполни блок под свою систему.
 
+**macOS / Linux** (Терминал):
 ```bash
-cd ~/.claude/skills && git clone https://github.com/theivansergeev/humaniser humaniser
+mkdir -p ~/.claude/skills
+git clone https://github.com/theivansergeev/humaniser ~/.claude/skills/humaniser
 ```
+
+**Windows** (PowerShell):
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+git clone https://github.com/theivansergeev/humaniser "$HOME\.claude\skills\humaniser"
+```
+
+Нет `git`? Поставь: macOS - `xcode-select --install`; Windows - [git-scm.com/download/win](https://git-scm.com/download/win) (или `winget install Git.Git`)
 
 Перезапусти Claude Code - скилл подхватится сам.
 
